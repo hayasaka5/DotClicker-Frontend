@@ -1,0 +1,138 @@
+@use 'reset';
+@use 'variables';
+.RoomModalOnline{
+    background-color: variables.$black;
+    display: flex;
+    border-radius: 10px;
+    font-family: variables.$defaultFont;
+    width: 1000px;
+    font-size: 20px;
+    .left{
+        width: 300px;
+        height: 600px;
+        background-image: url('./modalBackground.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+    }
+    .middleLeftWrap{
+        display: flex;
+    }
+    .middle{
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        color: variables.$white;
+        
+        input{
+            margin: 10px 0;
+            width: 300px;
+            height: 30px;
+            background-color: variables.$white;
+            border: 2px solid variables.$white;
+            border-radius: 2px;
+        }
+        input:focus{
+            border: 2px solid variables.$red;
+        }
+        label:nth-of-type(1){
+            margin-top:20px ;
+        }
+        
+    }
+    .right{
+        width: 300px;
+        margin: 290px 0 0 50px;
+       
+        .circle:nth-child(2){
+            margin-top:40px ;
+        }
+    }
+    .roomModalLobby{
+        margin: 150px 0 0 50px;
+        color: variables.$white;
+        .bottom{
+            width: 105%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 50px 0 0 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: variables.$white;
+            thead tr{
+            //   background-color: variables.$darkGray;
+            width: 100%;
+           
+              th {
+                padding: 0px 40px;
+                text-align: center;
+                font-weight: 400;
+              }
+              th:nth-of-type(1){
+                text-align: left;
+                padding: 0 40px 0 0;
+              }
+              th:nth-of-type(4){
+                padding: 0 0 0 40px;
+              }
+            }
+      
+            tbody {
+                tr:nth(:last-of-type){
+                    margin: 300px 0 0 0;
+                }
+              tr {
+                td {
+                  padding: 10px 40px;
+                  text-align: center;
+                //   border-bottom: 1px solid variables.$gray;
+                }
+                td:nth-of-type(1){
+                    padding: 0 40px 0 0;
+                    text-align: left;
+                }
+                td:nth-of-type(4){
+                    padding:0 0 0 40px;
+                }
+                .playCircle {
+                  margin: 0 auto;
+                }
+              }
+            }
+          }
+        }
+    }
+
+.playCircle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.playCircle--notReady{
+    background-color: variables.$white;
+}
+.playCircle--ready{
+    background-color: variables.$red;
+}
+.bigText{
+    font-size: 30px;
+}
+.error{
+    color: variables.$red;
+    height: 30px;
+}
+.circle{
+    color: variables.$white;
+    font-size:18px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: variables.$red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

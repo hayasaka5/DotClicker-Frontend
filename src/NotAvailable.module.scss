@@ -1,0 +1,39 @@
+@use 'variables';
+@use 'reset';
+
+@media(max-width: 1024px) {
+    .notAvailable {
+        position: fixed;           /* Устанавливаем фиксированное положение */
+        top: 0;                    /* Сдвигаем элемент к верхнему краю экрана */
+        left: 0;                   /* Сдвигаем элемент к левому краю экрана */
+        width: 100vw;              /* Занимает всю ширину экрана */
+        height: 100vh;             /* Занимает всю высоту экрана */
+        background-color: variables.$black;  /* Задаем фон, используя переменную */
+        color: variables.$red;            /* Цвет текста */
+        flex-direction: column;
+        z-index: 9999;                /* Убедитесь, что окно поверх других элементов */
+        display: flex;                 /* Для центровки контента */
+        justify-content: center;       /* Горизонтальная центровка */
+        align-items: center;           /* Вертикальная центровка */
+        font-size: 3vw;
+        span{
+            width: 70vw;
+            font: variables.$defaultFont; 
+        }
+        a{
+            font: variables.$coolFont;
+            color: variables.$white;
+            font-size: 4vw;
+        }
+    }
+}
+@media (max-width:600px){
+    .notAvailable{
+        a{
+            font-size: 6vw;
+        }
+        span{
+            font-size: 4vw;
+        }
+    }
+}

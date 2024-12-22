@@ -1,0 +1,102 @@
+@use 'reset';
+@use 'variables';
+.home{
+    background-image: url('./gameBackground.png');
+    // width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2vw;
+    font-family: variables.$defaultFont;
+}
+.NotAvailableWrap{
+    display: none;
+}
+@media (max-width:1024px){
+    .home{
+        overflow: hidden;  /* Отключаем прокрутку */
+      }
+    
+      /* Рендерим только .notAvailableWrap */
+      .NotAvailableWrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: variables.$black;
+        z-index: 9999; /* Показываем поверх всего */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      /* Скрываем все остальные элементы */
+    //   *:not(.NotAvailableWrap) {
+    //     display: none;
+    //   }
+
+}
+
+.onlineCircle{
+    background-color: variables.$red;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: variables.$white;
+    font-size: 35px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    border: 10px solid variables.$black;
+    margin-left: 300px;
+    font-family: variables.$coolFont;
+}
+.onlineCircle:hover{
+    background-color: variables.$black;
+    border: 10px solid variables.$red;
+   
+}
+.soloCircle{
+    background-color: variables.$red;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: variables.$black;
+    font-size: 30px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    border: 10px solid variables.$black;
+    top: 200px;
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: variables.$black;
+    font-size: 25px;
+}
+.logo{
+    font-family: variables.$coolFont;
+    color: variables.$red;
+    font-size: 35px;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0 0 0;
+    align-items: end;
+}
+.text{
+    color: variables.$red;
+    width: 300px;
+}
+.bigText{
+    font-size: 30px;
+    font-weight: 500;
+}

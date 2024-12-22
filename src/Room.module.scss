@@ -1,0 +1,93 @@
+@use 'reset';
+@use 'variables';
+.room{
+    width: 100vw;
+    height: 100vh;
+    border: 20px solid variables.$red;
+    background-color: variables.$black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: variables.$white;
+    .canvas{
+        width: 60vw;
+        height: 60vh;
+        background-color: variables.$white;
+        position: relative;
+
+        border: 60px solid variables.$white;
+    }
+    .stats{
+        display: flex;
+        justify-content: space-between;
+        width: 60vw;
+        font-size: 24px;
+        font-family: variables.$defaultFont;
+    }
+    .countDownOverlay{
+        color: variables.$red;
+        font-size: 40px;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 2;
+    }
+    .overlay{
+        z-index: 2;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный темный фон */
+        backdrop-filter: blur(10px); /* Размытие фона за элементом */
+    }
+    .redLive{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: variables.$red;
+        margin: 5px;
+    }
+    .whiteLive{
+        margin: 5px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: variables.$white;
+    }
+    .lives{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+.NotAvailableWrap{
+    display: none;
+}
+@media (max-width:1024px){
+    .room{
+        overflow: hidden;  /* Отключаем прокрутку */
+      }
+    
+      /* Рендерим только .notAvailableWrap */
+      .NotAvailableWrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: variables.$black;
+        z-index: 9999; /* Показываем поверх всего */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+ 
+
+}

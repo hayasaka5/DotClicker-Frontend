@@ -1,0 +1,76 @@
+// _reset.scss
+
+/* Удаляем отступы и поля по умолчанию */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; // Используем border-box для более предсказуемой модели коробки
+}
+
+/* Удаляем стили для списка */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Удаляем подчеркивание и стили ссылок */
+a {
+  text-decoration: none;
+  color: inherit; // Наследуем цвет текста
+}
+
+/* Сбрасываем стили для таблиц */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Удаляем обводку в полях ввода и кнопках в некоторых браузерах */
+button,
+input,
+textarea {
+  border: none;
+  outline: none;
+  font-family: inherit; // Наследуем шрифт
+}
+
+/* Устанавливаем базовые стили для кнопок */
+button {
+  cursor: pointer;
+  background: none;
+}
+
+/* Удаляем стандартные стили для изображений */
+img {
+  max-width: 100%;
+  height: auto; // Гарантируем, что изображение не выйдет за пределы контейнера
+  display: block;
+}
+
+/* Удаляем обводку при клике по ссылкам и кнопкам в некоторых браузерах */
+a:focus,
+button:focus {
+  outline: none;
+}
+
+/* Обнуление стилей для текста */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; // Улучшаем отображение шрифтов в Webkit
+  -moz-osx-font-smoothing: grayscale; // Улучшаем отображение шрифтов в Firefox
+}
+
+/* Базовый стиль для полей ввода */
+input,
+textarea {
+  font: inherit; // Наследуем стили шрифта от родителя
+}
+
+/* Удаляем тени на iOS */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+

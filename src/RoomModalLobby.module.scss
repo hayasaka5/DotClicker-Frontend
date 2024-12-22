@@ -1,0 +1,6 @@
+@use 'variables';
+@use 'reset';
+.RoomModalLobby{
+    background-color: variables.$black;
+    z-index: 4;
+}
